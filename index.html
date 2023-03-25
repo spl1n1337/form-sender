@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>PHPMAILER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="script/gsap.min.js"></script>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="msg" onclick="gsapMsg.reverse()">Сообщение</div>
+<div class="wrap">
+<form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+    <div class="group-input">
+    <div class="group-text-input">
+    <div class="input-wrap">
+        <input name="name" id="name" type="text" class="form-input aInput" autocomplete="off">
+        <label for="name" class="input-label">Представьтесь</label>
+    </div>
+    <div class="input-wrap">
+        <input name="email" id="email" type="text" class="form-input aInput" autocomplete="off">
+        <label for="email" class="input-label">Укажите почту</label>
+    </div>
+    </div>
+    <div class="input-wrap">
+ 	    <textarea name="texta" id="texta" class="aInput"></textarea>
+        <label for="texta" class="area-label">Сообщение</label>
+    </div>
+    </div>
+    <div class="file-wrap">
+        <label for="myfile" class="labelFile">
+            <img src="https://img.icons8.com/ios/50/000000/upload-to-cloud.png"/>
+            <p class="count">Прикрепить файлы</p>
+        </label>
+        <input type="file" multiple class="inputFile" id="myfile" name="file[]" multiple="multiple" onchange="inputFile(event)"/>
+    </div>
+    <button type="submit" class="button right">Отправить</button>
+</form>
+
+<a href="https://medium.com/@shpaginkirill/вменяемая-инструкция-к-phpmailer-отправка-писем-и-файлов-на-почту-b462f8ff9b5c" class="link">
+    <img src="https://miro.medium.com/fit/c/160/160/1*6_fgYnisCa9V21mymySIvA.png">
+    <p>Вменяемая инструкция к PHPMailer<br>“Отправка писем и файлов на почту”</p></a>
+    
+</div>
+</body>
+</html>
+<script src="script/script.js"></script>
